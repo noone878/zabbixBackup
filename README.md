@@ -2,7 +2,7 @@ README
 
 This code was written by Septian Al Rizki.
 
-Backup Zabbix Database & Directory Backup :
+Backup Zabbix Database MySQL & Directory Backup :
 - /etc/zabbix
 - /etc/apache2
 - /usr/share/zabbix
