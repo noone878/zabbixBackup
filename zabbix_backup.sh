@@ -31,9 +31,9 @@ Zabbix_Docs="zabbix_docs_$(date +\%Y\%m\%d_\%H\%M\%S).tar.gz"
 
 
 # Information MySQL
-local_user="zabbix"
-local_password="varni0nz4bb1x"
-database_name="zabbix"
+local_user="mysql_user"
+local_password="mysql_password"
+database_name="database_name"
 
 
 # Destinations Backup DB
