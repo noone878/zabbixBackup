@@ -1,6 +1,6 @@
 
-# Skrip ini ditulis oleh: Septian Al Rizki
-# Skrip ini tidak boleh dimodifikasi
+# This script was written by: Septian Al Rizki
+# https://github.com/noone878
 
 #!/bin/bash
 
