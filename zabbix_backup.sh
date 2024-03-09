@@ -51,9 +51,9 @@ mysqldump -h localhost -u "$local_user" -p"$local_password" "$database_name" > "
 
 # Show messages based on backup success
 if [ $? -eq 0 ]; then
-    echo "Backup database $database_name dari host berhasil disimpan di: $backup_file"
+    echo "Backup database $database_name successfully saved on: $backup_file"
 else
-    echo "Backup database $database_name dari host gagal"
+    echo "Backup database $database_namee failed"
 fi
 
 # Zabbix Config
@@ -66,9 +66,9 @@ for ((i=0; i<${#backup_directories1[@]}; i++)); do
 
     # show message based on backup success
     if [ $? -eq 0 ]; then
-        echo "Backup untuk ${backup_directories1[$i]} berhasil disimpan di: $zabbix_config"
+        echo "Backup untuk ${backup_directories1[$i]} successfully saved on: $zabbix_config"
     else
-        echo "Backup untuk ${backup_directories1[$i]} gagal"
+        echo "Backup untuk ${backup_directories1[$i]} failed"
     fi
 done
 
@@ -83,9 +83,9 @@ for ((i=0; i<${#backup_directories2[@]}; i++)); do
 
     # show message based on backup success
     if [ $? -eq 0 ]; then
-        echo "Backup untuk ${backup_directories2[$i]} berhasil disimpan di: $zabbix_apache2"
+        echo "Backup untuk ${backup_directories2[$i]} successfully saved on: $zabbix_apache2"
     else
-        echo "Backup untuk ${backup_directories2[$i]} gagal"
+        echo "Backup untuk ${backup_directories2[$i]} failed"
     fi
 done
 
@@ -100,9 +100,9 @@ for ((i=0; i<${#backup_directories3[@]}; i++)); do
 
     # show message based on backup success
     if [ $? -eq 0 ]; then
-        echo "Backup untuk ${backup_directories3[$i]} berhasil disimpan di: $zabbix_shared"
+        echo "Backup untuk ${backup_directories3[$i]} successfully saved on: $zabbix_shared"
     else
-        echo "Backup untuk ${backup_directories3[$i]} gagal"
+        echo "Backup untuk ${backup_directories3[$i]} failed"
     fi
 done
 
@@ -114,7 +114,7 @@ for ((i=0; i<${#backup_directories4[@]}; i++)); do
 done
 
 # show message based on backup succes
-echo "Backup Docs direktori berhasil disimpan di: $backup_locations4/$Zabbix_Docs"
+echo "successfully saved on: $backup_locations4/$Zabbix_Docs"
 
 # Find and delete backup files that are more than 7 days old, except zabbix_backup.sh and directories
 find /opt/zabbix-backup/* -type f -mtime +7 ! -name "zabbix_backup.sh" -exec rm {} \;
