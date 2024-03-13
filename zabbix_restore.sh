@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script was written by: Septian Al Rizki
+# https://github.com/noone878
+
 # Information Connection MySQL
 db_user="mysql_user"
 db_password="mysql_password"
